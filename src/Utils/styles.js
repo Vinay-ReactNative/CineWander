@@ -25,7 +25,7 @@ export const margin = (margin, marginHorizontal, marginVertical) => {
 
 export const marginPosition = (marginTop, marginRight, marginBottom, marginLeft) => {
     return StyleSheet.create({ marginTop, marginRight, marginBottom, marginLeft })
-}
+};
 
 //fontsize 
 

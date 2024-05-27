@@ -9,17 +9,14 @@ import { emailValidation, passwordValidation } from '../../Components/Validation
 import Button from '../../Components/Button'
 import { FacebookImg, appleImg, googleImg } from '../../assets/Images'
 import { SignIn2 } from './Components/SignIn2'
+import { useDispatch, useSelector } from 'react-redux'
+import { setUser } from '../../Redux/Slicers.js/addAccountSlice'
 
 export const CreateAccount = () => {
+    // const user = useSelector(state => state.registerReducer.user)
+    // const dispatch = useDispatch();
+    // console.log(user)
 
-    const CommonButton = () => {
-        <TouchableOpacity>
-            <View style={[widthvalue(3), heightvalue(3), styles.bgDisabled]}>
-                <Text>hi</Text>
-                <Image source={googleImg} style={[{ width: widthvalue(10), height: heightvalue(10) }]} />
-            </View>
-        </TouchableOpacity>
-    }
     const [showPassword, setShowPassword] = useState(false)
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -51,6 +48,9 @@ export const CreateAccount = () => {
             setError('')
         }
     }
+    // const RegisterUser = () => {
+    //     dispatch(setUser(email))
+    // }
     return (
         <ScrollView keyboardShouldPersistTaps={'handled'} contentContainerStyle={[{ minHeight: '100%' }, padding(0, 35, 30), styles.bgWhite, styles.spaceAround]}>
             <View>
@@ -75,7 +75,7 @@ export const CreateAccount = () => {
                     <Text>Remember Me</Text>
                 </View>
                 <View style={[margin(0, 0, 20)]}>
-                    <Button text={'Sign Up'} disabled={true} />
+                    <Button text={'Sign Up'} disabled={false} />
                 </View>
             </View>
             <View style={[styles.row, styles.allCenter, marginPosition(0, 0, 10, 0)]}>

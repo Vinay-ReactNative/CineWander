@@ -1,7 +1,8 @@
-import { Button, FlatList, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Button, FlatList, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import YoutubeIframe from 'react-native-youtube-iframe'
 import { YoutubeService } from '../../Api/YotubeService'
+import { styles } from '../../Utils/styles'
 
 const Dummy2 = () => {
 
@@ -21,19 +22,14 @@ const Dummy2 = () => {
     }
     return (
         <SafeAreaView>
-            <TouchableOpacity style={styles.buttonstyle} onPress={() => console.warn('hi shivu')}>
-                <View>
-                    <Text style={styles.textStyle}>Dummy2</Text>
-                </View>
-            </TouchableOpacity>
-            <View style={{ flex: 1, padding: 20 }}>
+            <View style={{ padding: 20 }}>
                 <TextInput
                     placeholder="Search YouTube"
                     value={query}
                     onChangeText={setQuery}
-                    style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 20 }}
+                    style={{ height: 40, width: '100%', borderColor: 'gray', borderWidth: 1, marginBottom: 20 }}
                 />
-                <Button title="Search" onPress={searchVideos} />
+                <Button title='search' onPress={searchVideos} />
                 {selectedVideo && (
                     <View style={{ height: 300, marginVertical: 20 }}>
                         <YoutubeIframe

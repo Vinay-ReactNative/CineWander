@@ -6,7 +6,7 @@ export const YoutubeService = {
     serachVideos: async (query) => {
 
         try {
-            const response = await axios.get(`${baseUrl / search}`, {
+            const response = await axios.get(`${baseUrl}/search`, {
                 params: {
                     part: 'snippet',
                     q: query,

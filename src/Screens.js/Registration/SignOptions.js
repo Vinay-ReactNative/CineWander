@@ -29,7 +29,7 @@ const SignOptions = ({ navigation }) => {
                     <Text style={{ color: '#00000080' }}>or</Text>
                     <View style={[heightvalue(10), styles.bgDimwhite]}></View>
                 </View>
-                <Button text={'Sign In with Password'} onPress={() => navigation.navigate('Login')} />
+                <Button text={'Sign In with Password'} onPress={() => navigation.navigate('BottomtabNavigation')} />
                 <View style={[styles.row, styles.allCenter, { gap: 5 }]}>
                     <Text style={[fontSize(16), styles.allCenter, styles.Black]}>Dont' have an account ?</Text>
                     <TouchableOpacity onPress={() => navigation.navigate('CreateAccount')} >
